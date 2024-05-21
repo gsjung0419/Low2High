@@ -1,0 +1,58 @@
+units           metal
+dimension       3
+boundary        p p p 
+atom_style      atomic
+atom_modify     sort 0 0.0    # turn off sorting of the coordinates
+read_data       fcc.data
+#replicate	2 2 2
+
+# initialize system
+
+velocity	all create 10.0 87287 loop geom
+
+pair_style      zero 7.0
+pair_coeff	* *  
+
+neighbor        1.0 bin
+neigh_modify    every 1 delay 0 check yes
+
+variable	dt equal 0.001
+timestep        ${dt}
+dump		equil all xyz 100 equil.xyz
+dump_modify     equil element Ni Nb
+
+fix             integ all nve
+python          post_force_callback file animpiuq.py
+fix             2 all python/torch 1 post_force post_force_callback
+fix_modify      2 energy yes
+
+
+thermo      	100
+thermo_style 	custom step temp ke pe press pxx pyy pzz lx ly lz 
+thermo_modify   norm no flush yes
+
+
+fix	        emin all box/relax iso 0.0
+min_style       cg
+min_modify      dmax 0.2
+min_modify      line quadratic
+minimize        0.0 1.0e-8 1000 10000
+unfix		emin
+
+fix             therm   all langevin  10.0 10.0  0.1 699483
+fix	        moment  all momentum 100 linear 1 1 1 angular
+
+
+#run		0
+#run 		1000
+
+unfix		therm
+unfix		moment
+fix             therm all temp/berendsen  10.0 10.0 0.1
+
+#run		1000
+
+
+undump		equil
+write_restart   after_relax.restart
+
