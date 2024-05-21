@@ -13,8 +13,8 @@ Title: Enhancing High-Fidelity Neural Network Potentials through Low-Fidelity Sa
    
     -. MPI (MPICH or OPENMPI), with mpi4py
 
-3. Training Tutorial with stress term (will be updated once the paper was accepted)
+3. Training Tutorial with stress term (will be updated once the paper is accepted)
 
-4. DFT data (will be updated once the paper was accepted)
+4. DFT data (will be updated once the paper is accepted)
 
 5. EAM data (32 atoms - 20,000 configuration poitns, 108 atoms -20,000 configurations) will be available in the other repository based on the paper "Data Distillation for Neural Network Potentials toward Foundational Dataset", https://arxiv.org/abs/2311.05407
