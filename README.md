@@ -1,7 +1,8 @@
 # Low2High
 The repository include lammps inputs with the trained model (best0.pt), which is the final model of DFT data. 
-The methods are explained in the following paper
-Title: Enhancing High-Fidelity Neural Network Potentials through Low-Fidelity Sampling
+The methods are explained in the following paper:
+
+# Title: Enhancing High-Fidelity Neural Network Potentials through Low-Fidelity Sampling
 
 1. Elastic_Ni_fcc
    Example and log file for the elastic constant calculations
