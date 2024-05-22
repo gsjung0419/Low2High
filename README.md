@@ -1,5 +1,5 @@
 # Low2High
-The repository include lammps inputs with the trained model (best0.pt), which is the final model of DFT data. 
+The repository includes lammps inputs with the trained model (best0.pt), which is the final model of relabeled DFT data. 
 The methods are explained in the following paper:
 
 ## Enhancing High-Fidelity Neural Network Potentials through Low-Fidelity Sampling
@@ -18,4 +18,4 @@ The methods are explained in the following paper:
 
 4. DFT data (will be updated once the paper is accepted)
 
-5. EAM data (32 atoms - 20,000 configuration poitns, 108 atoms -20,000 configurations) will be available in the other repository based on the paper "Data Distillation for Neural Network Potentials toward Foundational Dataset", https://arxiv.org/abs/2311.05407
+5. EAM data (32 atoms: 20,000 configuration poitns, 108 atoms: 20,000 configurations) will be available in the other repository based on the paper "Data Distillation for Neural Network Potentials toward Foundational Dataset", https://arxiv.org/abs/2311.05407
