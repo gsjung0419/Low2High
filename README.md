@@ -4,7 +4,7 @@ The methods are explained in the following paper:
 
 ## Enhancing High-Fidelity Neural Network Potentials through Low-Fidelity Sampling
 
-1. Elastic_Ni_fcc
+**1. Elastic_Ni_fcc**
    Example and log file for the elastic constant calculations
    To run this code, you need to install following codes
    
@@ -14,8 +14,8 @@ The methods are explained in the following paper:
    
     -. MPI (MPICH or OPENMPI), with mpi4py
 
-3. Training Tutorial with stress term (will be updated once the paper is accepted)
+**2. Training Tutorial** with stress term is available chapter 2: https://github.com/gsjung0419/TorchANITutorials  
 
-4. DFT data (will be updated once the paper is accepted)
+**3.  Selected ~2,500 configurations** through active learning ("Data Distillation for Neural Network Potentials toward Foundational Dataset", https://arxiv.org/abs/2311.05407), is available in the tutorial. 
 
-5. EAM data (32 atoms: 20,000 configuration poitns, 108 atoms: 20,000 configurations) will be available in the other repository based on the paper "Data Distillation for Neural Network Potentials toward Foundational Dataset", https://arxiv.org/abs/2311.05407
+**4. DFT data** will be available with other ongoing sampling (Tensile loading and gas phases). 
